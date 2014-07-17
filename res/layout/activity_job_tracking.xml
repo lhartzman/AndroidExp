@@ -1,0 +1,215 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/RelativeLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:columnCount="2"
+    android:orientation="horizontal"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".JobTracking" >
+
+    <Button
+        android:id="@+id/datePickerButton"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="15dp"
+        android:onClick="showDatePickerDialog"
+        android:text="@string/date" />
+
+    <TextView
+        android:id="@+id/contactedText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/datePickerButton"
+        android:layout_below="@+id/datePickerButton"
+        android:layout_marginTop="15dp"
+        android:text="@string/contacted" />
+
+    <EditText
+        android:id="@+id/personContacted"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/contactedText"
+        android:layout_alignBottom="@+id/contactedText"
+        android:layout_alignParentRight="true"
+        android:layout_alignRight="@id/datePickerButton"
+        android:layout_marginRight="0dp"
+        android:ems="10"
+        android:inputType="text|textPersonName"
+        android:maxWidth="40dp" >
+
+        <requestFocus />
+    </EditText>
+
+    <TextView
+        android:id="@+id/emailText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/contactedText"
+        android:layout_below="@+id/personContacted"
+        android:layout_marginTop="15dp"
+        android:text="@string/email" />
+
+    <EditText
+        android:id="@+id/emailAddress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/emailText"
+        android:layout_alignBottom="@+id/emailText"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="38dp"
+        android:layout_toRightOf="@+id/emailText"
+        android:ems="10"
+        android:inputType="textEmailAddress" />
+
+    <TextView
+        android:id="@+id/companyText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/emailText"
+        android:layout_below="@+id/emailAddress"
+        android:layout_marginTop="15dp"
+        android:text="@string/company" />
+
+    <EditText
+        android:id="@+id/companyName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/companyText"
+        android:layout_alignBottom="@+id/companyText"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="38dp"
+        android:layout_toRightOf="@+id/companyText"
+        android:ems="10"
+        android:inputType="text" />
+
+    <TextView
+        android:id="@+id/compAddrText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/companyText"
+        android:layout_below="@+id/companyName"
+        android:layout_marginTop="15dp"
+        android:text="@string/address" />
+
+    <EditText
+        android:id="@+id/companyAddress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/compAddrText"
+        android:layout_alignBottom="@+id/compAddrText"
+        android:layout_alignLeft="@+id/companyName"
+        android:layout_alignParentRight="true"
+        android:ems="10"
+        android:inputType="textPostalAddress" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/compAddrText"
+        android:layout_below="@+id/companyAddress"
+        android:layout_marginTop="15dp"
+        android:text="@string/phone" />
+
+    <EditText
+        android:id="@+id/editText4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textView4"
+        android:layout_alignBottom="@+id/textView4"
+        android:layout_alignLeft="@+id/companyAddress"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="17dp"
+        android:ems="10"
+        android:inputType="phone" />
+
+    <TextView
+        android:id="@+id/positionText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView4"
+        android:layout_below="@+id/editText4"
+        android:layout_marginTop="15dp"
+        android:text="@string/position" />
+
+    <EditText
+        android:id="@+id/positionAppliedFor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/positionText"
+        android:layout_alignBottom="@+id/positionText"
+        android:layout_alignLeft="@+id/companyAddress"
+        android:layout_alignParentRight="true"
+        android:ems="10"
+        android:inputType="text" />
+
+    <TextView
+        android:id="@+id/statusText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/positionText"
+        android:layout_below="@+id/positionAppliedFor"
+        android:layout_marginTop="15dp"
+        android:text="@string/status" />
+
+    <EditText
+        android:id="@+id/currentStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/statusText"
+        android:layout_alignBottom="@+id/statusText"
+        android:layout_alignLeft="@+id/positionAppliedFor"
+        android:layout_alignParentRight="true"
+        android:ems="10"
+        android:inputType="text" />
+
+    <Button
+        android:id="@+id/resetButton"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/addButton"
+        android:layout_alignBottom="@+id/addButton"
+        android:layout_marginLeft="65dp"
+        android:layout_marginRight="70dp"
+        android:text="@string/reset" />
+
+    <Button
+        android:id="@+id/addButton"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/currentStatus"
+        android:layout_marginLeft="90dp"
+        android:layout_marginTop="14dp"
+        android:layout_toRightOf="@+id/datePickerButton"
+        android:text="@string/add" />
+
+    <Button
+        android:id="@+id/historyButton"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/resetButton"
+        android:layout_centerHorizontal="true"
+        android:text="@string/history" />
+
+    <EditText
+        android:id="@+id/dateField"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/contactedText"
+        android:layout_alignParentRight="true"
+        android:ems="10"
+        android:inputType="date"
+        android:width="200dp" />
+
+</RelativeLayout>
